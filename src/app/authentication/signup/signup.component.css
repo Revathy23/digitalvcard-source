@@ -1,0 +1,23 @@
+mat-card{
+  width: 60%;
+  margin: 2rem;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.blue{
+  background: #4285f4;
+  color: #fff;
+}
+
+.align{
+  padding-left: 300px;
+  padding-right: 300px;
+}

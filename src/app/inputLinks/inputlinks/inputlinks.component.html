@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div class="center">
+<h2>Hey, Paste the specified links here...</h2>
+</div>
+<form [formGroup]="formdata" >
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card>
+        <mat-form-field>
+          <input matInput placeholder="LinkedIn" formControlName = "linkedin" autofocus>
+          <mat-error *ngIf="checkError('linkedin','required')">LinkedIn link is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Twitter" formControlName = "twitter">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Git" formControlName = "git">
+        </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Facebook" formControlName = "facebook">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Instagram" formControlName = "instagram">
+      </mat-form-field>
+  <button type="submit"
+    mat-raised-button class="blue" (click)="onClickSubmit()" id="submit_btn">Generate Link</button>
+  </mat-card>
+</div>
+</form>

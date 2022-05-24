@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="center">
+  <h2>Sign up to get link</h2>
+</div>
+<form [formGroup]="signupForm">
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card>
+    <mat-form-field>
+      <input matInput placeholder="First Name" formControlName="firstName" autofocus>
+          <mat-error *ngIf="checkError('firstName','required')">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Last Name" formControlName="lastName">
+          <mat-error *ngIf="checkError('lastName','required')">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Email" formControlName="userName" >
+        <mat-error *ngIf="checkError('userName','required')||checkError('userName','email')">Invalid email</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="password" formControlName="password" placeholder="Password" >
+          <mat-error *ngIf="checkError('password','required')">Password is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="password" formControlName="confirmPassword" placeholder="Confirm Password">
+        <mat-error *ngIf="checkError('confirmPassword','required')">Passwords aren't matching</mat-error>
+    </mat-form-field>
+
+
+  <button type="submit" mat-raised-button class="blue" (click)="onSubmit()"
+      id="login_btn">Signup</button>
+  </mat-card>
+</div>
+</form>
+

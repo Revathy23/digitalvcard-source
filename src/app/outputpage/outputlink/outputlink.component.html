@@ -1,0 +1,12 @@
+<div class="center">
+  <h2>Re, here's your link...</h2>
+</div>
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card>
+      <mat-form-field>
+        <input matInput [(ngModel)]="linkValue">
+      </mat-form-field>
+
+      <button mat-raised-button class="blue" [cdkCopyToClipboard]="linkValue">Copy</button>
+    </mat-card>
+  </div>

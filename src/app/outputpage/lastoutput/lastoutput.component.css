@@ -1,0 +1,36 @@
+mat-card{
+  width: 30%;
+  margin: 2rem;
+  background-color: #4285f4;
+  color: #fff;
+  border-radius: 10px !important;
+}
+
+i{
+  font-size: 20px;
+  margin: 1rem;
+  padding-left: 40px;
+  color: #fff;
+}
+
+.font{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.mail{
+  font-size: 20px;
+}
+
+.phone{
+  font-size: 20px;
+  padding-left: 65px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+a:link {
+  color:inherit;
+}

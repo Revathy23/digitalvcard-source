@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="center">
+  <h2>Login</h2>
+</div>
+<div fxLayoutAlign="center center">
+<form [formGroup]="loginForm">
+  <mat-card>
+      <mat-form-field>
+          <input matInput placeholder="Email" formControlName="userName" autofocus>
+          <mat-error *ngIf="checkError('userName','required')||checkError('userName','email')">Invalid email</mat-error>
+              <br>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" formControlName="password" placeholder="Password" >
+        <mat-error *ngIf="checkError('password','required')">Password is required</mat-error>
+      </mat-form-field>
+
+  <button type="submit" mat-raised-button class="blue" (click)="onSubmit()"
+      id="login_btn">Login</button>
+  </mat-card>
+</form>
+</div>
